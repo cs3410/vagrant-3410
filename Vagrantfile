@@ -17,9 +17,9 @@ Vagrant.configure(2) do |config|
     ]
   end
 
-  config.vm.provision :shell, privileged: false, :path => "setup-dev-tools.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-sublime.sh"
+  config.vm.provision :shell, :path => "setup-dev-tools.sh"
+  config.vm.provision :shell, :path => "setup-lxde.sh"
+  config.vm.provision :shell, :path => "setup-sublime.sh"
 
   # disable the synced folder feature (Windows bug if commented out)
   config.vm.synced_folder ".", "/vagrant", disabled: true
