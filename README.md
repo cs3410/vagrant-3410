@@ -2,7 +2,7 @@
 
 1. Download and install both [Vagrant](http://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org). Make sure you're running the latest version of both.
 
-2. Download or clone this repository and install the VM.
+2. Download or clone this repository and install the VM. To get started, open up a Terminal/Command Prompt window. If you downloaded the repo into your "Downloads" folder, the path you might `cd` into might be something like `~/Downloads/vagrant-3410` on OS X/Unix or `C:\Desktop\vagrant-3410` on Windows
 
         git clone https://github.com/cs3410/vagrant-3410.git
         cd vagrant-3410
