@@ -1,0 +1,24 @@
+.vagrant/
+
+# Compiled Files #
+a.out
+bin/
+build/
+*.class
+*.pyc
+
+# Text Backup Files #
+*.sw[a-z]
+*~
+\#*\#
+.\#*
+
+# OS X Files #
+.DS_Store
+._*
+.Spotlight*
+.Trashes
+
+# Windows Files #
+Thumbs.db
+ehthumbs.db
