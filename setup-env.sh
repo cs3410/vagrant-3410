@@ -31,7 +31,7 @@ function prompt_command {
     fi
 
     prompt_prefix="(CS3410 VM) "
-    prompt="${OFF}${CYAN}${prompt_prefix}${OFF}\u@\h: ${CYAN}\w${OFF}${branch}"
+    prompt="${OFF}${CYAN}${prompt_prefix}${OFF}\u: ${CYAN}\w${OFF}${branch}"
 
     if [ ${exitstatus} -eq 0 ]; then
         PS1="${prompt} ${GREEN}$ ${OFF}"
