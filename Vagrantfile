@@ -7,7 +7,6 @@ Vagrant.configure(2) do |config|
   config.ssh.forward_x11 = false
 
   config.vm.provider :virtualbox do |v|
-    v.gui = false
     v.name = "cs3410-2016fa"
     v.customize [
       "modifyvm", :id,
