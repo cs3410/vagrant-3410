@@ -14,5 +14,12 @@
 
 5. If you `ls`, you'll notice you have a folder `3410` within the VM. This folder will be mirrored on your VM and Host Machine! This allows you to work on files on your host, and compile and run them on the VM! Note: **Always make sure to compile and run your code on the VM!**
 
+## Using the GUI
+
+If you are using the GUI shell, then you can access the vm by logging into the `vagrant` user.
+
+    username: vagrant
+    password: vagrant
+
 ## Troubleshooting
 If you have problems during installation (such as accidently quitting installation early or other issues), you can type `vagrant destroy` to remove the broken VM and then `vagrant up` to install again.
