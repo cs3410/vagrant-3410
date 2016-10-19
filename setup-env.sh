@@ -1,8 +1,10 @@
 BASHRC=/home/vagrant/.bashrc
 
-if ! grep '#3410 VM init' $BASHRC; then
-    echo '#3410 VM init' >> $BASHRC
-    cat >> $BASHRC << 'EOF'
+sed '/#===CS3410 VM init===/,/#===CS3410 VM end===/d' $BASHRC > $BASHRC.tmp
+mv $BASHRC.tmp $BASHRC
+
+echo '#===CS3410 VM init===' >> $BASHRC
+cat >> $BASHRC << 'EOF'
 function prompt_command {
     exitstatus="$?"
 
@@ -42,11 +44,12 @@ function prompt_command {
     PS2="${BOLD}>${OFF} "
 }
 PROMPT_COMMAND=prompt_command
+LS_COLORS=$LS_COLORS:'di=1;36:'; export LS_COLORS
 export EDITOR=vim
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 bind '"\eOA": history-search-backward'
 bind '"\eOB": history-search-forward'
 EOF
+echo '#===CS3410 VM end===' >> $BASHRC
 
-fi
