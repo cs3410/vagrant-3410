@@ -1,7 +1,8 @@
 BASHRC=/home/vagrant/.bashrc
 
 sed '/#===CS3410 VM init===/,/#===CS3410 VM end===/d' $BASHRC > $BASHRC.tmp
-mv $BASHRC.tmp $BASHRC
+cat $BASHRC.tmp > $BASHRC
+rm $BASHRC.tmp
 
 echo '#===CS3410 VM init===' >> $BASHRC
 cat >> $BASHRC << 'EOF'
