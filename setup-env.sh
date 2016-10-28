@@ -10,12 +10,12 @@ function prompt_command {
     exitstatus="$?"
 
     BOLD="\[\033[1m\]"
-    RED="\[\033[0;38;5;9m\]"
-    GREEN="\[\033[0;38;5;10m\]"
-    BLUE="\[\033[0;38;5;27m\]"
-    PURPLE="\[\033[0;38;5;21m\]"
-    CYAN="\[\033[0;38;5;39m\]"
-    YELLOW="\[\033[0;38;5;226m\]"
+    RED="\[\033[0;31m\]"
+    GREEN="\[\033[0;32m\]"
+    YELLOW="\[\033[0;33m\]"
+    BLUE="\[\033[0;34m\]"
+    PURPLE="\[\033[0;35m\]"
+    CYAN="\[\033[0;36m\]"
     OFF="\[\033[0m\]"
 
     changes=`git status -s 2> /dev/null | wc -l | sed -e 's/ *//'`
@@ -34,7 +34,7 @@ function prompt_command {
     fi
 
     prompt_prefix="(CS3410 VM) "
-    prompt="${OFF}${CYAN}${prompt_prefix}${OFF}\u: ${CYAN}\w${OFF}${branch}"
+    prompt="${OFF}${YELLOW}${prompt_prefix}${OFF}\u: ${CYAN}\w${OFF}${branch}"
 
     if [ ${exitstatus} -eq 0 ]; then
         PS1="${prompt} ${GREEN}$ ${OFF}"
