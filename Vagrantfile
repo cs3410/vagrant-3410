@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "cs3410-2016fa"
-    vb.gui = true
+    #vb.gui = true
     vb.memory = "2048"
     vb.customize [
       "modifyvm", :id,

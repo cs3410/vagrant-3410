@@ -9,14 +9,14 @@ echo "Updating package repositories"
 sudo apt-get update
 
 echo "Installing development tools"
-sudo apt-get -y install git
-sudo apt-get -y install curl
-sudo apt-get -y install wget
-sudo apt-get -y install htop
-sudo apt-get -y install build-essential
-sudo apt-get -y install unzip
-sudo apt-get -y install dos2unix
-sudo apt-get -y install python-dev
+sudo apt-get install -y git
+sudo apt-get install -y curl
+sudo apt-get install -y wget
+sudo apt-get install -y htop
+sudo apt-get install -y build-essential
+sudo apt-get install -y unzip
+sudo apt-get install -y dos2unix
+sudo apt-get install -y python-dev
 
 # Required for mipsel-linux components
 # Could potentially be removed by changing to libreadline6 in simulate32 and 64 (requires recompilation most likely)
