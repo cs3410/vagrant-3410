@@ -1,5 +1,6 @@
 BASHRC=/home/vagrant/.bashrc
 
+touch $BASHRC
 sed '/#===CS3410 VM init===/,/#===CS3410 VM end===/d' $BASHRC > $BASHRC.tmp
 cat $BASHRC.tmp > $BASHRC
 rm $BASHRC.tmp
@@ -46,7 +47,6 @@ function prompt_command {
 }
 PROMPT_COMMAND=prompt_command
 LS_COLORS=$LS_COLORS:'di=1;36:'; export LS_COLORS
-export EDITOR=vim
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 bind '"\eOA": history-search-backward'
