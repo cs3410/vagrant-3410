@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   config.ssh.forward_x11 = false
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "cs3410-2016fa"
+    vb.name = "cs3410-2017fa"
     #vb.gui = true
     vb.memory = "2048"
     vb.customize [
