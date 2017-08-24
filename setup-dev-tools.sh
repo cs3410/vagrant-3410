@@ -32,5 +32,4 @@ sudo apt-get install -y valgrind
 # Install llvm (includes scan-build tools)
 sudo apt-get install -y clang
 
-sudo apt-get install -y gcc-4.4
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 20
+sudo apt-get install -y gcc
